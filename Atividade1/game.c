@@ -1,31 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "games.h"
-int i,j;
-Games  temp;
-char escolhe_tipo[100];
-float notaX;
-void cria_games(Games *p, char nome, char tipo, int ano, int download, float nota){
-for (i = 0; i <=100; i++)
-	{
-		printf("\nCADASTRANDO %d JOGO!\n", i+1);
-		printf("\n\n");
-		printf("Insira o nome do %d jogo\n",i+1);
-		fgets (p->nome, 100, stdin);
-		printf("Insira o tipo do %d jogo\n", i+1);
-		fgets (p->tipo, 100, stdin);
-		printf("Insira o ano de lancamento: %d\n",p->ano);
-		printf("Insira o numero de downloads: %d\n",p->download);
-		printf("Insira a nota do jogo %f\n", p->nota);
-		printf("\n");
-		getchar();
-	}
-	
+#include <string.h>
+#include "game.h"
+
+void cria_games(Game *p, char nomeG[TAM], char tipoG[TAM], int anoG, int downloadG, float notaG)        //Cria os jogos
+{
+		strcpy(p->nome, nomeG);
+		strcpy(p->tipo, tipoG);
+		p -> ano = anoG;
+		p -> download = downloadG;
+		p -> nota = notaG;	
 }
 
-void mostra_games(Games *a){
-int i,j;
-Games p[100], temp;
+
+void mostra_games(Game *p)              // Lista os jogos
+{
+    printf("Listando os jogos existentes...\n");
+    printf("Jogo: %s\n\n", p->nome);
+}
+
+/*
 printf("\nListando todos os jogos!\n");
 	printf("\n\n");
 
@@ -185,5 +179,5 @@ printf("\n\n");
 	}
 }
 
-
+*/
 
