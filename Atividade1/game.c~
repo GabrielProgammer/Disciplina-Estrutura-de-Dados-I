@@ -24,7 +24,11 @@ void mostra_games(Game *p)              // Lista os jogos
 	}
 }
 
+<<<<<<< HEAD
 void ordena_rating_crescente (Game *p)
+=======
+void ordena_rating_crescente (Game *p) // ordena
+>>>>>>> 78a1bd3fe324933ec5a88615beb19352d6ce76ab
 {
 	printf("Ordenando notas por ordem crescente!\n");
 	printf("\n\n");
