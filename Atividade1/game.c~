@@ -58,7 +58,7 @@ void exibe_rating_crescente (Game *p)
 		printf("\n\n");
 	}
 }
-//devem ser implementados //
+
 /*
 Games *ordena_rating_decrescente (Games *a){
 for(i = 100; i>= 1; i--)
