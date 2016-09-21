@@ -1,5 +1,5 @@
 #define TAM 40		// Tamanho das strings a serem usadas
-
+#define TSTRUCT 3	// Tamanho das posições da struct
 typedef struct games
 {
 	char nome[TAM];
@@ -9,10 +9,10 @@ typedef struct games
 }Game;
 
 void cria_games(Game *p, char nome[TAM], char tipo[TAM], int ano, int download, float nota);
+void mostra_games(Game *p);
+void ordena_rating_crescente (Game *p);
+void exibe_rating_crescente (Game *p);
 /*
-void mostra_games(Games *a);
-Games *ordena_rating_crescente (Games *a);
-void exibe_rating_crescente (Games *a);
 Games *ordena_rating_decrescente (Games *a);
 void *exibe_rating_decrescente(Games *a);
 Games *ordena_tipo (Games *a);
