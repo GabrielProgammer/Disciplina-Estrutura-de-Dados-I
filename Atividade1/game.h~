@@ -12,6 +12,7 @@ void cria_games(Game *p, char nome[TAM], char tipo[TAM], int ano, int download, 
 void mostra_games(Game *p);
 void ordena_rating_crescente (Game *p);
 void exibe_rating_crescente (Game *p);
+//modificações devem ser feitas//
 /*
 Games *ordena_rating_decrescente (Games *a);
 void *exibe_rating_decrescente(Games *a);
