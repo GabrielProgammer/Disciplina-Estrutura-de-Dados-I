@@ -8,7 +8,7 @@
 
 int main()
 {
-	Game p[TSTRUCT], *a[TSTRUCT]; 
+	Game p[TSTRUCT], *a[TSTRUCT];
 	int i;
 
 	for (i = 0; i < TSTRUCT; i++)			// Igualando as posições das estruturas 'a' com 'p'
