@@ -12,13 +12,11 @@ void cria_games(Game *p, char nome[TAM], char tipo[TAM], int ano, int download, 
 void mostra_games(Game *p);
 void ordena_rating_crescente (Game *p);
 void exibe_rating_crescente (Game *p);
-//modificações devem ser feitas//
-/*
-Games *ordena_rating_decrescente (Games *a);
-void *exibe_rating_decrescente(Games *a);
-Games *ordena_tipo (Games *a);
-Games *ordena_ano_x (Games *a);
-Games *ordena_ano_crescente (Games *a);
-Games *ordena_ano_decrescente(Games *a);
-*/
+void rating_decrescente (Game *p);
+void exibe_rating_decrescente(Game *p);
+void ordena_tipo (Game *p);
+void ordena_ano_x (Game *p);
+void ordena_ano_crescente (Game *p);
+void ordena_ano_decrescente(Game *p);
+
 

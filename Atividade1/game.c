@@ -19,8 +19,8 @@ void mostra_games(Game *p)              // Lista os jogos
 
 	for (i = 0; i < TSTRUCT; i++)
 	{
-    	printf("Jogo: %s\tTipo: %s\tAno: %d", p[i].nome, p[i].tipo, p[i].ano);
-		printf("\tDownloads: %d\tNota: %.1f\n\n", p[i].download, p[i].nota);
+    	printf("Jogo: %s\nTipo: %s\nAno: %d", p[i].nome, p[i].tipo, p[i].ano);
+		printf("\nDownloads: %d\nNota: %.1f\n\n", p[i].download, p[i].nota);
 	}
 }
 
@@ -50,125 +50,141 @@ void exibe_rating_crescente (Game *p)
 	int i;
 	for (i = 0; i < TSTRUCT; i++)
 	{
-		printf("Nome: %s\t", p[i].nome);
-		printf("Tipo: %s\t", p[i].tipo);
-		printf("Ano: %d\n\t", p[i].ano);
-		printf("Dowloads: %d\t", p[i].download);
-		printf("Nota: %.1f\t", p[i].nota);
+		printf("Nome: %s\n", p[i].nome);
+		printf("Tipo: %s\n", p[i].tipo);
+		printf("Ano: %d\n", p[i].ano);
+		printf("Dowloads: %d\n", p[i].download);
+		printf("Nota: %.1f\n", p[i].nota);
 		printf("\n\n");
 	}
 }
-//devem ser implementados //
-/*
-Games *ordena_rating_decrescente (Games *a){
-for(i = 100; i>= 1; i--)
+
+
+void rating_decrescente (Game *p){
+printf("Ordenando notas por ordem decrescente!\n");
+printf("\n\n");
+int i,j;
+Game temp;
+for(i = 100; i> TSTRUCT; i--)
+
 	{
-		for(j=0; j<i ; j++)
+		for(j=0; j< TSTRUCT ; j++)
 		{
-			if(a->nota < a[j+1].nota)
+			if(p[j].nota < p[j+1].nota)
 			{
-				temp = a[j];
-				a[j] = a[j+1];
-				a[j+1] = temp;
+				temp = p[j];
+				p[j] = p[j+1];
+				p[j+1] = temp;
 			}
 		}	
 	}
 }
 
-void *exibe_rating_decrescente(Games *a){
-for(i = 0; i <=100; i++)
+void exibe_rating_decrescente(Game *p){
+int i;
+for(i = 0; i < TSTRUCT; i++)
 	{
-		printf("Nome: %s", a->nome);
-		printf("Tipo: %s", a->tipo);
-		printf("Ano: %d\n", a->ano);
-		printf("Dowloads: %d\n", a->download);
-		printf("Nota: %.1f\n", a->nota);
+		printf("Nome: %s\n", p[i].nome);
+		printf("Tipo: %s\n", p[i].tipo);
+		printf("Ano: %d\n", p[i].ano);
+		printf("Dowloads: %d\n", p[i].download);
+		printf("Nota: %.1f\n", p[i].nota);
 		printf("\n\n");	
 	}
 }
 
-Games *ordena_tipo (Games *a){
-for (i = 0; i <=100; i++)
+void ordena_tipo (Game *p){
+int i;
+char escolhe_tipo[TSTRUCT];
+for (i = 0; i < TSTRUCT; i++)
 	{
-		if (!strcmp(escolhe_tipo, a->tipo))
+		if (!strcmp(escolhe_tipo, p->tipo))
 		{
-			printf("Nome: %s", a->nome);
-			printf("Tipo: %s", a->tipo);
-			printf("Ano: %d\n", a->ano);
-			printf("Dowloads: %d\n", a->download);
-			printf("Nota: %.1f\n", a->nota);
+			printf("Nome: %s\n", p[i].nome);
+			printf("Tipo: %s\n", p[i].tipo);
+			printf("Ano: %d\n", p[i].ano);
+			printf("Dowloads: %d\n", p[i].download);
+			printf("Nota: %.1f\n", p[i].nota);
 			printf("\n\n");
 		}
 	}
 }
-Games *ordena_ano_x (Games *a){
+
+void ordena_ano_x (Game *p){
+int i;
+float notaX;
 printf("\nMostrando jogos apenas com a nota %.1f\n", notaX);
 	printf("\n\n");
-	for (i = 0; i < 100; i++)
+	for (i = 0; i < TSTRUCT; i++)
 	{
-		if (notaX == a->nota)
+		if (notaX == p->nota)
 		{
-			printf("Nome: %s", a->nome);
-			printf("Tipo: %s", a->tipo);
-			printf("Ano: %d\n", a->ano);
-			printf("Dowloads: %d\n", a->download);
-			printf("Nota: %.1f\n", a->nota);
+			printf("Nome: %s\n", p[i].nome);
+			printf("Tipo: %s\n", p[i].tipo);
+			printf("Ano: %d\n", p[i].ano);
+			printf("Dowloads: %d\n", p[i].download);
+			printf("Nota: %.1f\n", p[i].nota);
 			printf("\n\n");
 		}
 	}	
 }
-Games *ordena_ano_crescente (Games *a){
-printf("\nListando em ordem crescente!\n");
+
+void ordena_ano_crescente (Game *p){
+int i,j;
+Game temp;
+printf("\nListando ano em ordem crescente!\n");
 	printf("\n\n");
 	
-	for (i = 0; i <=100; i++)
+	for (i = 0; i < TSTRUCT; i++)
 	{
-		for (j = 0; j <=100 - 1; j++)
+		for (j = 0; j < TSTRUCT - 1; j++)
 		{
-			if (a->ano > a[j+1].ano)
+			if (p->ano > p[j+1].ano)
 			{
-				temp = a[j];
-				a[j] = a[j+1];
-				a[j+1] = temp;
+				temp = p[j];
+				p[j] = p[j+1];
+				p[j+1] = temp;
 			}
 		}
 	}
-	for (i = 0; i <=100; i++)
+	for (i = 0; i < TSTRUCT; i++)
 	{
-		printf("Nome: %s", a->nome);
-		printf("Tipo: %s", a->tipo);
-		printf("Ano: %d\n", a->ano);
-		printf("Dowloads: %d\n", a->download);
-		printf("Nota: %.1f\n", a->nota);
+		printf("Nome: %s\n", p[i].nome);
+		printf("Tipo: %s\n", p[i].tipo);
+		printf("Ano: %d\n", p[i].ano);
+		printf("Dowloads: %d\n", p[i].download);
+		printf("Nota: %.1f\n", p[i].nota);
 		printf("\n\n");
 	}
 }
-Games *ordena_ano_decrescente(Games *a){
-printf("\nListando em ordem decrescente!\n");
+void ordena_ano_decrescente(Game *p){
+int i,j;
+Game temp;
+printf("\nListando ano em ordem decrescente!\n");
 printf("\n\n");
-	for(i = 100; i>= 1; i--)
+	for(i = 100; i> TSTRUCT; i--)
 	{
-		for(j=0; j<i; j++)
+		for(j=0; j<TSTRUCT; j++)
 		{
-			if(a->ano < a[j+1].ano)
+			if(p->ano < p[j+1].ano)
 			{
-				temp = a[j];
-				a[j] = a[j+1];
-				a[j+1] = temp;
+				temp = p[j];
+				p[j] = p[j+1];
+				p[j+1] = temp;
 			}
 		}	
 	}
 	
-	for (i = 0; i <=100; i++)
+	for (i = 0; i < TSTRUCT; i++)
 	{
-		printf("Nome: %s", a->nome);
-		printf("Tipo: %s", a->tipo);
-		printf("Ano: %d\n", a->ano);
-		printf("Dowloads: %d\n", a->download);
-		printf("Nota: %.1f\n", a->nota);
+		printf("Nome: %s\n", p[i].nome);
+		printf("Tipo: %s\n", p[i].tipo);
+		printf("Ano: %d\n", p[i].ano);
+		printf("Dowloads: %d\n", p[i].download);
+		printf("Nota: %.1f\n", p[i].nota);
 		printf("\n\n");
 	}
 }
 
-*/
+
 
