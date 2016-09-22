@@ -15,7 +15,7 @@ p->madeira=valorM;
 void vervalorC(Porta *a,char valorC){
   for(i=0;i<3;i++){
   a->cor=valorC;
-  printf("a cor da porta
+  printf("a cor da porta: %c",valorC
  }
 }
 
