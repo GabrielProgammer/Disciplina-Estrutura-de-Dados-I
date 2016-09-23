@@ -32,3 +32,5 @@ void vervalort2(Porta *a,float valort2){
   printf("o tamanho e :%f ",valort2);
  }
 }
+
+
