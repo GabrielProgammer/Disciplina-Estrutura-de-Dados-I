@@ -40,17 +40,18 @@ void inicializa(Pilha *p)
 void insere(Pilha *p, int elementoP)
 {
 	p -> topo = p -> topo + 1;
-	p -> pilha[p->topo] = elementoP;
+	p -> topo = elementoP;
 }
 
-void retira(Pilha *p)
+void retira(Pilha *p, int elementoP)
 {
+	elementoP = p -> topo;
 	p -> topo = p -> topo - 1;
 }
 
 void imprime_topo(Pilha *p)
 {
-	printf("\n\nImprimindo topo...\n");
-	printf("%d", p->pilha[p->topo]);
+	printf("Imprimindo topo...\n");
+	printf("");
 }
 
