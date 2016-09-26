@@ -1,4 +1,4 @@
-#define TAMANHO 4
+#define TAMANHO 15
 
 typedef struct pilha
 {
@@ -8,7 +8,5 @@ typedef struct pilha
 
 void inicializa(Pilha *p);
 void insere(Pilha *p, int elemento);
-void retira(Pilha *p);
+void retira(Pilha *p, int elemento);
 void imprime_topo(Pilha *p);
-void imprime_multiplo7(Pilha *p);
-void imprime_pilha(Pilha *p);

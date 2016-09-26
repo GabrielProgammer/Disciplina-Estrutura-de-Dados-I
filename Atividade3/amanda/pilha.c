@@ -7,4 +7,3 @@ void excluirabasedapilha( Pilha *p , float aux ){
    return aux;
 }
 }
-
