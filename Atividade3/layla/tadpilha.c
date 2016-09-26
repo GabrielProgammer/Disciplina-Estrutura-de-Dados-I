@@ -27,18 +27,5 @@ void retira_meio(Pilha *a,int valor,int topo){
       topo=aux
       vet--       
      }
-   
-     
-
-
-
-
-   
-     elem = valorE;
-     topo= topo;
-     aux = elem;
-     elem = topo;
-     topo= aux;
-}
 
 
