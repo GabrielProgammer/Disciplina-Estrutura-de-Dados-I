@@ -14,4 +14,3 @@ void vertipodemadeira(Porta *a,char madeira);
 void verdesign(Porta *a,char design);
 void verdesgaste(Porta *a,float desgaste);
 void vervalores(Porta *a);
-

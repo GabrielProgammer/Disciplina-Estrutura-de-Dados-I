@@ -6,7 +6,6 @@
 void criaporta(Porta *p,char valorC,char valort1, float valort2,float valorp,){
 =======
 void criaporta(Porta *p,char valorC,char valorM, float valorT,float valorp,float valorL,float valorD){
->>>>>>> 5b07fd5777ba85b9a5750cfdca6914bbbfdd0f6b
 p->cor=valorC;
 p->modelo=valorM;
 p->tamanho=valorT;
@@ -52,7 +51,4 @@ void valort1(Porta *a,char valorM){
 
 void valorT(Porta *a,float valorT){
   a->valorT("o tamanho da porta sera: %f",valorT);
-
->>>>>>> 5b07fd5777ba85b9a5750cfdca6914bbbfdd0f6b
-
 
