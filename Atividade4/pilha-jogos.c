@@ -1,44 +1,42 @@
 #include <stdio.h>
-#include <sdlib.h>
-#include "pilha-jogos.h"
+#include <stdlib.h>
+#include <string.h>
+#include "pilha-jogo.h"
 
+void inicia(Visualizados *g)
+{
+	g->topo = -1;
+}
 
-void inicializa(Pilha *p){
+void cadastra(Game *p, char nomeG[TAM], int anoG)
+{
+	p->ano = anoG;
+	strcpy(p->nome, nomeG);
+}
 
-p->topo +1;
+void visualiza(Game *p, Visualizados *g, char nomeG[TAM])
+{
+	for (i = 0; i < TSTRUCT; i++)
+	{
+		if (!strcmp(nomeG, p[i].nome))
+		{
+				printf("Jogo %s visualizado!\n", nomeG);
+				g->topo = g->topo + 1;
+				strcpy(g[g->topo].visualizado, nomeG);
+		}	  
+	}
 }
-void vizualização_jogos(Game *p, char auxnome[TAM], char auxtipo[TAM], int auxano, int auxdownload, float auxnota, int i){
- for (i=0, i<TAM, i++ ){
- char auxnome=p->nome[TAM];
- char auxtipo[TAM]=p->tipo[TAM];
- int auxano=p->ano;
- int auxdownload=p->download;
- float auxnota=p->nota;
- printf("os jogos que foram jogados foram\n");
- return auxnome;
- return auxtipo;
- return auxano;
- return auxdownload;
- return auxnota;
- 
- 
 
+void ver_ultimo_jogado(Visualizados *g)
+{
+	printf("Ultimo jogo jogado: %s\n", g[g->topo].visualizado);
 }
-void insere(Pilha *p, int elemento){
-}
-void retira(Pilha *p){
-}
-void emprime_últimojogo(Pilha *p ){
-printf(" o último jogo a jogado foi %s \n ", p->Game[p->nome];
-printf("tipo %s \n ",p->Game[p->tipo]);
-printf("ano %d\n", p->Gama[p->ano]);
-printf("download %d\n",p->Game[p->download]);
-printf("nota %f\n",p->Game[p->nota]);
-}
-void removejogoda_base(Pilha *p){
 
-
-}
-void imprime_pilhajogos(Pilha*a){
+void exclui_ultimo_jogado(Visualizados *g)
+{
+	if (g->topo == -1)
+		printf("Nenhum jogo jogado, impossivel remover!\n");
+	else
+		g -> topo = g -> topo -1;
 
 }
