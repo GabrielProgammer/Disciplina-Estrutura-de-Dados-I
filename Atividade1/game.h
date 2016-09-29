@@ -14,8 +14,8 @@ void ordena_rating_crescente (Game *p);
 void exibe_rating_crescente (Game *p);
 void rating_decrescente (Game *p);
 void exibe_rating_decrescente(Game *p);
-void ordena_tipo (Game *p);
-void ordena_ano_x (Game *p);
+//	void ordena_tipo (Game *p);				BUG
+void ordena_nota_x (Game *p, float nota);
 void ordena_ano_crescente (Game *p);
 void ordena_ano_decrescente(Game *p);
 

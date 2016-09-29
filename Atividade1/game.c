@@ -93,6 +93,7 @@ for(i = 0; i < TSTRUCT; i++)
 	}
 }
 
+/*		BUG
 void ordena_tipo (Game *p){
 int i;
 char escolhe_tipo[TSTRUCT];
@@ -108,12 +109,12 @@ for (i = 0; i < TSTRUCT; i++)
 			printf("\n\n");
 		}
 	}
-}
+} 				BUG*/
 
-void ordena_ano_x (Game *p){
-int i;
-float notaX;
-printf("\nMostrando jogos apenas com a nota %.1f\n", notaX);
+void ordena_nota_x (Game *p, float notaX)]
+{
+	int i;
+	printf("\nMostrandos jogos apenas com a nota %f\n", notaX);
 	printf("\n\n");
 	for (i = 0; i < TSTRUCT; i++)
 	{
@@ -160,8 +161,10 @@ printf("\nListando ano em ordem crescente!\n");
 void ordena_ano_decrescente(Game *p){
 int i,j;
 Game temp;
+
 printf("\nListando ano em ordem decrescente!\n");
 printf("\n\n");
+
 	for(i = 100; i> TSTRUCT; i--)
 	{
 		for(j=0; j<TSTRUCT; j++)
