@@ -14,8 +14,13 @@ void ordena_rating_crescente (Game *p);
 void exibe_rating_crescente (Game *p);
 void rating_decrescente (Game *p);
 void exibe_rating_decrescente(Game *p);
+<<<<<<< HEAD
 //	void ordena_tipo (Game *p);				BUG
 void ordena_nota_x (Game *p, float nota);
+=======
+void ordena_tipo (Game *p, char tipo[TAM]);
+void ordena_ano_x (Game *p, float nota);
+>>>>>>> ae7e017bd3ee72119b0bb3e4df8929b13d63ab91
 void ordena_ano_crescente (Game *p);
 void ordena_ano_decrescente(Game *p);
 

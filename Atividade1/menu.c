@@ -24,8 +24,13 @@ int main()
 	exibe_rating_crescente(a[0]);	
 	rating_decrescente (a[0]);
     exibe_rating_decrescente(a[0]);
+<<<<<<< HEAD
 //    ordena_tipo (a[0]);				BUG
     ordena_nota_x (a[0], 5);
+=======
+    ordena_tipo (a[0], "Acao");
+    ordena_ano_x (a[0], 10.0);
+>>>>>>> ae7e017bd3ee72119b0bb3e4df8929b13d63ab91
     ordena_ano_crescente(a[0]);	
 	ordena_ano_decrescente(a[0]);	// Exibe as notas ordenadas
 

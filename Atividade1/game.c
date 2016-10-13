@@ -93,13 +93,18 @@ for(i = 0; i < TSTRUCT; i++)
 	}
 }
 
+<<<<<<< HEAD
 /*		BUG
 void ordena_tipo (Game *p){
+=======
+void ordena_tipo (Game *p, char tipoX[TAM]){
+>>>>>>> ae7e017bd3ee72119b0bb3e4df8929b13d63ab91
 int i;
-char escolhe_tipo[TSTRUCT];
+
+printf("Exibindo jogos apenas do genero %s;\n", tipoX);
 for (i = 0; i < TSTRUCT; i++)
 	{
-		if (!strcmp(escolhe_tipo, p->tipo))
+		if (!strcmp(p[i].tipo, tipoX))
 		{
 			printf("Nome: %s\n", p[i].nome);
 			printf("Tipo: %s\n", p[i].tipo);
@@ -111,14 +116,21 @@ for (i = 0; i < TSTRUCT; i++)
 	}
 } 				BUG*/
 
+<<<<<<< HEAD
 void ordena_nota_x (Game *p, float notaX)]
 {
 	int i;
 	printf("\nMostrandos jogos apenas com a nota %f\n", notaX);
+=======
+void ordena_ano_x (Game *p, float notaX){				// Mostra de acordo com a nota desejada
+int i;
+
+printf("\nMostrando jogos apenas com a nota %.1f\n", notaX);
+>>>>>>> ae7e017bd3ee72119b0bb3e4df8929b13d63ab91
 	printf("\n\n");
 	for (i = 0; i < TSTRUCT; i++)
 	{
-		if (notaX == p->nota)
+		if (notaX == p[i].nota)
 		{
 			printf("Nome: %s\n", p[i].nome);
 			printf("Tipo: %s\n", p[i].tipo);
@@ -158,6 +170,7 @@ printf("\nListando ano em ordem crescente!\n");
 		printf("\n\n");
 	}
 }
+
 void ordena_ano_decrescente(Game *p){
 int i,j;
 Game temp;
