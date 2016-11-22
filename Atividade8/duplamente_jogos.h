@@ -12,4 +12,4 @@ Game*insere(Game *p, char nome[TAM], int ano);
 void lista_elementos(Game *p);
 Game*busca(Game *p, char nome[TAM]);
 Game*retira(Game *p, char nome[TAM]);
-Game*listar(Game *p);
+
